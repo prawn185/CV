@@ -10,7 +10,7 @@ const app = Vue.createApp({
             isTyping: false,
             clear: false,
             commands: {
-                help: 'Available commands: help, about, experience, achievements, contact, clear, download',
+                help: 'Available commands: help, about, experience, achievements, contact, paper, projects, clear, download,',
                 about: `Hi, I'm Shaun Moore, a Lead/Backend Engineer with over 8 years of experience in PHP and Laravel. \n
                  I excel at tech architecture and team leadership, guiding projects from concept to completion with a focus on delivering high-quality, scalable solutions. \n
                  I've worked everywhere from startups to large corporations, in multiple industries including travel, automotive, gambling and Proptech. \n
@@ -22,7 +22,7 @@ const app = Vue.createApp({
 • Tech Languages: PHP, Laravel, Golang, Python jQuery, React, SCSS
 • Languages: English(Native), Spanish(A1,Conversational)
 • Lead an A/B testing platform, leading to a increase in conversions 
-• (Almost published) Paper on predicting dementia using machine learning with a 92% accuracy rate
+• (Almost published) Paper on predicting dementia using machine learning with a 88.28% accuracy rate - see 'paper'
 • Lead a team of 19 non-english speakers to manage a ranch in Mexico`,
                 experience: `Work Experience:
 Kamma Data - Senior Software Developer (October 2023 - Present)
@@ -55,7 +55,7 @@ Creative Hedgehog - Lead Software & Web Developer (August 2018 - 2023)
 2. Sykes Cottages - Implemented efficient customer acquisition strategies
 3. Rancho Las Cascadas - Created custom CMS and booking system for multiple resorts
 4. AutoHQ - Created a custom CRM for multiple car dealerships
-5. Dementia Prediction - Developed a machine learning model to predict dementia with 92% accuracy
+5. Dementia Prediction - Developed a machine learning model to predict dementia with 88.28% accuracy - see 'paper'
 
 I'd love to share more about my projects, but what's the fun in you reading it? Let me tell you about it instead!`,
                 education: `Education:
@@ -66,6 +66,24 @@ I'd love to share more about my projects, but what's the fun in you reading it? 
                     '\n LinkedIn: https://www.linkedin.com/in/shaunrmoore/' +
                     '\n GitHub: https://github.com/prawn185' +
                     '\n Portfolio: https://prawn185.github.io',
+                paper: `I've been working on a paper to predict dementia using machine learning. \n
+                The model has a 88.28% accuracy rate and is currently in the final stages of review. \n    
+                If you'd like to know more; Please contact me. \n
+                Here's the abstract: \n
+                This study focuses on early detection of dementia
+through a database derived from the National Health and Ageing
+Trends Study (NHATS). With a cohort of 72,835 participants
+and spanning 12 years, the database offers a rich source for
+identifying dementia indicators. We utilised the AD8 test for
+early cognitive changes. Employing a Random Forest model,
+we predict ’demclas’ for subsequent years with an impressive
+88.28% accuracy. Further with an importance factor algorithm
+we identify key variables such as Clock Drawing, Immediate
+Word Recall, and Word Recall Ability as pivotal for dementia
+determination.
+                `,
+                
+                
                 clear: 'Clearing the terminal...',
                 download: 'Downloading CV... (file: ShaunMoore_CV.pdf)'
             }
@@ -139,7 +157,7 @@ I'd love to share more about my projects, but what's the fun in you reading it? 
             document.body.removeChild(link);
             this.output.push('CV downloaded successfully. <br>' +
                 ' Alternatively, you can view my CV online at:' +
-                ' <a href="https://prawn185.github.io/ShaunMoore_CV2024.pdf" target="_blank" rel="noopener noreferrer" class="underline text-blue">Online Version</a>');
+                ' <a href="https://github.com/prawn185/CV/blob/main/ShaunMoore_CV2024.pdf" target="_blank" rel="noopener noreferrer" class="underline text-blue">Online Version</a>');
         }
     },
     updated() {
