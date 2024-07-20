@@ -65,7 +65,7 @@ I'd love to share more about my projects, but what's the fun in you reading it? 
                     ' | Phone: 07300 220183' +
                     ' | LinkedIn: https://www.linkedin.com/in/shaunrmoore/' +
                     ' | GitHub: https://github.com/prawn185' +
-                    ' | Portfolio: https://shaunmoore.co.uk',
+                    ' | Portfolio: https://prawn185.github.io',
 
             }
         }
