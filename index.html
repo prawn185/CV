@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaun Moore - Terminal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body {
+            background-color: #2E3440;
+        }
+        .window {
+            background-color: #2E3440;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .terminal-body {
+            background-color: #2E3440;
+        }
+    </style>
+</head>
+<body class="font-mono">
+<div id="app" class="h-screen flex items-center justify-center p-4">
+    <div class="window rounded-lg w-full max-w-4xl overflow-hidden">
+        <div class="bg-gray-800 px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <div class="text-white text-sm">Terminal - shaun@portfolio</div>
+            <div class="w-5"></div>
+        </div>
+        <div ref="terminal" class="terminal-body p-4 h-[calc(100vh-8rem)] overflow-y-auto text-white">
+            <div v-for="(line, index) in output" :key="index" class="mb-1">
+                <div v-html="line"></div>
+            </div>
+            <div class="flex items-center">
+                <div v-html="getPromptHTML()"></div>
+                <input
+                        type="text"
+                        v-model="input"
+                        @keypress="handleInput"
+                        class="bg-transparent border-none text-white flex-grow outline-none text-sm ml-1"
+                        placeholder="Type a command..."
+                        autofocus
+                        :disabled="isTyping"
+                >
+            </div>
+        </div>
+        <span class="text-white text-sm px-4 py-2 block text-center">Made with <span class="text-red-500">❤</span> by Shaun
+    </div>
+
+</div>
+<script src="vue-terminal-portfolio.js"></script>
+</body>
+</html>
