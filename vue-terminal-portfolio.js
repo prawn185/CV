@@ -80,8 +80,7 @@ we predict ’demclas’ for subsequent years with an impressive
 88.28% accuracy. Further with an importance factor algorithm
 we identify key variables such as Clock Drawing, Immediate
 Word Recall, and Word Recall Ability as pivotal for dementia
-determination.
-                `,
+determination.`,
                 
                 
                 clear: 'Clearing the terminal...',
